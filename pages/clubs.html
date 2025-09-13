@@ -593,44 +593,8 @@
     </footer>
 
     <!-- Scripts -->
-    <script>
-        // 간단한 테마 토글 기능
-        let currentTheme = 'dark';
-
-        function toggleTheme() {
-            const body = document.body;
-            const themeToggle = document.getElementById('themeToggle');
-            
-            if (currentTheme === 'dark') {
-                body.setAttribute('data-theme', 'light');
-                themeToggle.textContent = '🌞';
-                currentTheme = 'light';
-            } else {
-                body.setAttribute('data-theme', 'dark');
-                themeToggle.textContent = '🌙';
-                currentTheme = 'dark';
-            }
-            
-            localStorage.setItem('dcu-theme', currentTheme);
-        }
-
-        // 저장된 테마 로드
-        document.addEventListener('DOMContentLoaded', function() {
-            const savedTheme = localStorage.getItem('dcu-theme');
-            if (savedTheme) {
-                currentTheme = savedTheme;
-                const body = document.body;
-                const themeToggle = document.getElementById('themeToggle');
-                
-                if (currentTheme === 'light') {
-                    body.setAttribute('data-theme', 'light');
-                    themeToggle.textContent = '🌞';
-                } else {
-                    themeToggle.textContent = '🌙';
-                }
-            }
-        });
-    </script>
-    <script src="clubs.js"></script>
+    <script src="../js/particles.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/clubs.js"></script>
 </body>
 </html>
